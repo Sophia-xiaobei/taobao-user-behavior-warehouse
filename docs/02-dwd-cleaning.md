@@ -36,7 +36,6 @@ FROM dwd.dwd_user_behavior
 GROUP BY dt ORDER BY dt;
 ```
 结果：9 个分区（2017-11-25 ~ 2017-12-03），日期连续无缺失，每日约959770万行。
-![屏幕截图 2026-10-12 225308](C:\Users\周湘泉\Pictures\Screenshots\屏幕截图 2026-10-12 225308.png)
 
 ### 4.2 行为类型分布
 ```sql
@@ -46,7 +45,6 @@ FROM dwd.dwd_user_behavior
 GROUP BY behavior_type ORDER BY cnt DESC;
 ```
 结果：pv 89.58%、cart 5.51%、fav 2.88%、buy 2.02%，符合电商业务预期（浏览为主，购买约 2%）。
-![image-20261012230029309](C:\Users\周湘泉\AppData\Roaming\Typora\typora-user-images\image-20261012230029309.png)
 
 ### 4.3 独立实体统计
 ```sql
@@ -56,7 +54,6 @@ SELECT COUNT(DISTINCT user_id) AS uv,
 FROM dwd.dwd_user_behavior;
 ```
 结果：独立用户 954234、商品1754051、类目8247。
-![image-20261012230253504](C:\Users\周湘泉\AppData\Roaming\Typora\typora-user-images\image-20261012230253504.png)
 
 ### 4.4 脏数据量核算
 ```sql

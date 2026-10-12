@@ -75,7 +75,6 @@ SELECT COUNT(*) FROM dwd.dwd_user_behavior WHERE behavior_type='pv';  -- 结果�
 ```
 
 结果：两值**完全一致**，对账通过，证明 DWD → DWS 聚合链路无数据丢失或重复。
-![4c39eae9f2ef79a8793cc0ef07a6303e](C:\Users\周湘泉\OneDrive\xwechat_files\wxid_re0rln6zsscv22_9174\temp\RWTemp\2026-10\9e20f478899dc29eb19741386f9343c8\4c39eae9f2ef79a8793cc0ef07a6303e.png)
 
 ## 5. 建模要点总结
 
